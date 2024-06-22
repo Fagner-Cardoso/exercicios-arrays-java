@@ -12,7 +12,7 @@ public class Main {
         * **/
 
         // inicialização do array
-        int[] inteiros = {8,5,64,9,45,77,3,15,12,22};
+        int[] inteiros = {8,5,64,9,45,77,3,-7,15,12,22};
 
         int maiorValor = maiorValorArray(inteiros);
         int menorValor = menorValorArray(inteiros);
@@ -24,9 +24,9 @@ public class Main {
 
     //método que retorna o maior valor em um array
     static int maiorValorArray(int[] arr){
-        int maiorValor = 0;
+        int maiorValor = arr[0];
         for(int i = 0; i < arr.length; i++){
-            if(maiorValor <= arr[i]){
+            if(maiorValor < arr[i]){
                 maiorValor = arr[i];
             }
         }
@@ -36,9 +36,9 @@ public class Main {
 
     //método que retorna o menor valor em um array
     static int menorValorArray(int[] arr){
-        int menorValor = maiorValorArray(arr);
+        int menorValor = arr[0];
         for(int i = 0; i < arr.length; i++){
-            if(menorValor >= arr[i]){
+            if(menorValor > arr[i]){
                 menorValor = arr[i];
             }
         }
